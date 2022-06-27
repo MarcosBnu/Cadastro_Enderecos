@@ -68,7 +68,7 @@ campos de endereço;</td>
 
 <ol>
   <li>pip install -r requirements.TXT</li>
-  <li>cd src</li>
+  <li>cd scr</li>
   <li>python manage.py makemigrations</li>
   <li>python manage.py migrate</li>
   <li>python manage.py runserver</li>
