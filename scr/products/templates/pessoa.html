@@ -1,0 +1,29 @@
+<DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <title>Home</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        </head>
+        <body>
+            <br><br>
+            <ul style="display:inline-block">
+                {%for pessoa in pessoas%}
+                    <a>
+                        <li><h3>CEP: {{pessoa.cep}}</h3></li>
+                        <li><h3>Endereço: {{pessoa.ende}}</li></h3>
+                        <li><h3>Numero: {{pessoa.numero}}</li></h3>
+                        <li><h3>Complemento: {{pessoa.complemento}}</li></h3>
+                        <li><h3>Bairro: {{pessoa.bairro}}</li></h3>
+                        <li><h3>Cidade: {{pessoa.cidade}}</li></h3>
+                        <li><h3>UF: {{pessoa.uf}}</li></h3>
+                        <li><h3>Descrição: {{pessoa.descricao}}</li></h3>
+                        <hr><hr>
+                        <br><br>
+                    </a>
+                {% endfor %}
+            </ul>
+            <button type="button" class="btn btn-success"><h3><a href="{%url 'create_pessoas'%}">Cadastrar</a></h3></button>
+        </body>
+    </html>
